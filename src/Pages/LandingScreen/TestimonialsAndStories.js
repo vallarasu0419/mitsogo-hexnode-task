@@ -1,6 +1,6 @@
 import * as React from "react";
 import Testimonials from "./Testimonials";
-import { Box, Tab, Typography } from "@mui/material";
+import { Box, Tab } from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";

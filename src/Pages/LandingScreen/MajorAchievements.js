@@ -40,15 +40,9 @@ const MajorAchievements = () => {
               sx={{
                 marginBottom: "25px",
                 justifySelf: "left",
-                // display: "inline-block",
-                //   justify-self
                 marginLeft: {
                   md: "140px",
                 },
-                // textAlign: {
-                //   sm: "left",
-                //   xs: "left",
-                // },
               }}
             >
               <img
@@ -130,7 +124,7 @@ const MajorAchievements = () => {
           >
             <img
               src={book}
-              alt="Booklet Image"
+              alt=""
               style={{
                 maxWidth: "100%",
                 height: "auto",

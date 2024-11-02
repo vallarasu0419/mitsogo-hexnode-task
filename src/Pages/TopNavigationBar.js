@@ -8,7 +8,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import { menuItems } from "../DummyData/NavData";
 import MobileMenu from "./MobileMenu";
 import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Box from "@mui/material/Box";
@@ -182,7 +181,12 @@ const TopNavigationBar = () => {
             {isMobileMenuOpen ? (
               <CloseIcon />
             ) : (
-              <MenuIcon sx={{ fontSize: "25px" }} />
+              <MenuIcon
+                sx={{
+                  fontSize: "25px",
+                  paddingRight: { md: "0px", xs: "40px", sm: "0px" },
+                }}
+              />
             )}
           </MobileIcon>
         </div>
@@ -219,7 +223,6 @@ const Navbar = styled.div`
     isScrolled ? "0 4px 12px rgba(0, 0, 0, 0.1)" : "none"};
   transition: background-color 0.3s, box-shadow 0.3s;
   z-index: 1000;
-
   @media (max-width: 1200px) {
     display: none;
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { awards } from "../../DummyData/NavData";
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 const AwardsContainer = styled.div`
   background-color: #1a1c2b;
