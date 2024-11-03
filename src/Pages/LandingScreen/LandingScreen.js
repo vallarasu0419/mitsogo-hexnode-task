@@ -7,6 +7,7 @@ import TestimonialsAndStories from "./TestimonialsAndStories";
 import MajorAchievements from "./MajorAchievements";
 import StartJourney from "./StartJourney";
 import Footer from "./Footer";
+import BottomFooter from "./BottomFooter";
 
 const LandingScreen = () => {
   return (
@@ -19,6 +20,7 @@ const LandingScreen = () => {
       <MajorAchievements />
       <StartJourney />
       <Footer />
+      <BottomFooter />
     </>
   );
 };

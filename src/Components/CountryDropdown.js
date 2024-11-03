@@ -35,7 +35,7 @@ const countries = [
   },
 ];
 
-const CountryDropdown = ({ isScrolled, hovered }) => {
+const CountryDropdown = ({ isScrolled, hovered, direction }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(
     countries[0].country[0]
@@ -70,9 +70,15 @@ const CountryDropdown = ({ isScrolled, hovered }) => {
     borderRadius: "4px",
     boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
     zIndex: 1,
-    marginTop: "5px",
+    marginTop: direction === "down" ? "5px" : undefined,
+    marginBottom: direction === "up" ? "5px" : undefined,
     width: "300px",
-    right: "0px",
+    top: direction === "up" ? undefined : "100%",
+    bottom: direction === "up" ? "100%" : undefined,
+    left: direction === "up" ? "0px" : undefined,
+    right: direction === "up" ? undefined : "0px",
+    // marginTop: "5px",
+    // width: "300px",
   };
 
   const dropdownItemStyle = {

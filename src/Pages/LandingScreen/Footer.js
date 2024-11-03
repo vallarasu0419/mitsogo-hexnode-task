@@ -10,7 +10,7 @@ import banner from "../../assets/promo-banner.png";
 
 const Footer = () => {
   return (
-    <Box sx={{ backgroundColor: "#f5f5f5", padding: "40px" }}>
+    <Box sx={{ padding: "40px" }}>
       <Grid container spacing={4}>
         {/* Hexnode Logo and Capabilities */}
         <Grid item xs={12} sm={12} md={4} lg={2}>
@@ -273,13 +273,63 @@ const Footer = () => {
           </Box>
         </Grid>
       </Grid>
-      <Box sx={{ mt: 4, textAlign: "center" }}>
-        <Typography variant="body2" sx={{ color: "#556575" }}>
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="body2" sx={sectionTitleStyle}>
           LOCATIONS
         </Typography>
-        <Typography variant="body2" sx={{ color: "#556575" }}>
-          USA • CANADA • AUSTRALIA • UK • GERMANY • FRANCE
-        </Typography>
+        <Box
+          sx={{
+            display: { md: "flex", sm: "flex", xs: "block" },
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <Link href="#" underline="none" sx={linkStyle}>
+              San Francisco (HQ)
+            </Link>{" "}
+          </div>
+          <div>
+            <Link href="#" underline="none" sx={linkStyle}>
+              Atlanta
+            </Link>
+          </div>{" "}
+          <div>
+            <Link href="#" underline="none" sx={linkStyle}>
+              London
+            </Link>
+          </div>{" "}
+          <div>
+            <Link href="#" underline="none" sx={linkStyle}>
+              Dubai
+            </Link>
+          </div>{" "}
+          <div>
+            <Link href="#" underline="none" sx={linkStyle}>
+              Singapore
+            </Link>
+          </div>{" "}
+          <div>
+            <Link href="#" underline="none" sx={linkStyle}>
+              Bangalore
+            </Link>
+          </div>
+          <div>
+            <Link href="#" underline="none" sx={linkStyle}>
+              Delhi
+            </Link>
+          </div>{" "}
+          <div>
+            <Link href="#" underline="none" sx={linkStyle}>
+              Chennai
+            </Link>
+          </div>{" "}
+          <div>
+            {" "}
+            <Link href="#" underline="none" sx={linkStyle}>
+              Kochi
+            </Link>
+          </div>
+        </Box>
       </Box>
     </Box>
   );

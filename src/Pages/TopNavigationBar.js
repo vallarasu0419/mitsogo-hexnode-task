@@ -91,7 +91,11 @@ const TopNavigationBar = () => {
             </div>
             <div>Contact Sales</div>
             <div>+1-833-439-6633</div>
-            <CountryDropdown isScrolled={isScrolled} hovered={hovered} />
+            <CountryDropdown
+              isScrolled={isScrolled}
+              hovered={hovered}
+              direction={"down"}
+            />
           </NavBarRightContent>
           <CustomButton lable={"14 DAY FREE TRIAL"} />
         </NavbarRight>
