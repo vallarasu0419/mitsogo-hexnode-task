@@ -1,6 +1,7 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import img1 from "../../Assets/img1.jpg";
+import img1 from "../../assets/img1.jpg";
+import CustomButton from "../../Components/CustomButton";
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
       sx={{
         backgroundColor: "#101420",
         fontFamily: "sans-serif",
-        padding: "30px",
+        paddingTop: "50px",
       }}
     >
       <Grid container spacing={2}>
@@ -27,7 +28,6 @@ const Home = () => {
         >
           <Box
             sx={{
-              //   padding: "30px",
               flex: "1 1 auto",
               textAlign: {
                 xs: "center",
@@ -75,54 +75,19 @@ const Home = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 justifyItems: "center",
+                gap: "20px",
               }}
             >
-              <Button
-                variant="contained"
-                sx={{
-                  margin: "10px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "#DD0735",
-                  padding: "20px",
-                  width: {
-                    md: "240px",
-                  },
-                  maxWidth: "260px",
-                }}
-              >
-                <Typography style={{ fontSize: "17px", lineHeight: "21px" }}>
-                  TRY FOR FREE
-                </Typography>
-              </Button>
+              <CustomButton
+                lable={"TRY FOR FREE"}
+                style={{ padding: "20px" }}
+              />
 
-              <Button
-                variant="outlined"
-                sx={{
-                  margin: "10px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  border: "1px solid #fff",
-                  backgroundColor: "transparent",
-                  padding: "20px",
-                  width: {
-                    md: "240px",
-                  },
-                  maxWidth: "260px",
-                }}
-              >
-                <Typography
-                  style={{
-                    fontSize: "17px",
-                    lineHeight: "21px",
-                    color: "#fff",
-                  }}
-                >
-                  REQUEST DEMO
-                </Typography>
-              </Button>
+              <CustomButton
+                lable={"REQUEST DEMO"}
+                style={{ padding: "20px" }}
+                outlined
+              />
             </Box>
           </Box>
         </Grid>

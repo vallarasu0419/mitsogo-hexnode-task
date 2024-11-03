@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { menuItems } from "../DummyData/NavData";
 import MobileMenu from "./MobileMenu";
-import Drawer from "@mui/material/Drawer";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Box from "@mui/material/Box";
-import { Divider, Grid } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import CustomDropdown from "../Components/CustomDropdown";
+import CustomButton from "../Components/CustomButton";
+import CountryDropdown from "../Components/CountryDropdown";
 
 const TopNavigationBar = () => {
   const [hovered, setHovered] = useState(false);
-  const [hoveredMenu, setHoveredMenu] = useState(null);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const NavbarHeight = 90;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,69 +29,9 @@ const TopNavigationBar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleMenuItemClick = (submenu) => {
-    if (submenu && submenu !== hoveredMenu) {
-      setHoveredMenu(submenu);
-      setDrawerOpen(true);
-    } else {
-      setDrawerOpen(false);
-      setHoveredMenu(null);
-    }
-  };
+  const DemoData = ["Request a Demo", "Watch a Demo"];
 
-  const handleMenuItemLeave = () => {
-    setDrawerOpen(false);
-    setHoveredMenu(null);
-    setIsScrolled(false);
-  };
-
-  const renderDrawerList = () => (
-    <Box
-      sx={{ width: "auto", padding: "50px" }}
-      role="presentation"
-      onMouseLeave={handleMenuItemLeave}
-    >
-      <Grid container spacing={2}>
-        {hoveredMenu?.map((item, index) => (
-          <Grid item xs={4} key={index}>
-            {" "}
-            <ListItem button>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  width: "100%",
-                  padding: "30px",
-                }}
-              >
-                <ListItemText
-                  primary={item.title}
-                  sx={{
-                    fontSize: "18px",
-                    lineHeight: "24px",
-                    fontWeight: "normal",
-                    color: "#020a19",
-                    margin: 0,
-                  }}
-                />
-                <ListItemText
-                  primary={item.description}
-                  sx={{
-                    fontSize: "18px",
-                    lineHeight: "18px",
-                    fontWeight: "normal",
-                    color: "gray",
-                    margin: 0,
-                  }}
-                />
-              </Box>
-            </ListItem>
-            <Divider orientation="horizontal" variant="middle" flexItem />
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-  );
+  const [showDemo, setShowDemo] = useState(false);
 
   return (
     <>
@@ -109,62 +44,58 @@ const TopNavigationBar = () => {
         <div style={{ display: "flex", alignItems: "center" }}>
           <Logo>hexnode</Logo>
           <MenuContainer>
-            <Menu>
-              {menuItems.map((item, index) => (
-                <MenuItem
-                  key={index}
-                  onClick={() => {
-                    if (item.submenu) {
-                      handleMenuItemClick(item.submenu);
-                      setIsScrolled(true);
-                    } else {
-                      handleMenuItemLeave();
-                    }
-                  }}
-                >
-                  <span>{item.name}</span>
-                  {item.submenu && (
-                    <>
-                      {drawerOpen && hoveredMenu === item.submenu ? (
-                        <KeyboardArrowUpIcon />
-                      ) : (
-                        <KeyboardArrowDownIcon />
-                      )}
-                    </>
-                  )}
-                </MenuItem>
-              ))}
-            </Menu>
+            <CustomDropdown menuItems={menuItems} />
           </MenuContainer>
         </div>
 
         <NavbarRight>
-          <span>✨ What's new</span>
-          <span>Demo</span>
-          <span>Contact Sales</span>
-          <span>+1-833-439-6633</span>
-          <span role="img" aria-label="language">
-            🇺🇸 English
-          </span>
-          <TrialButton>14 DAY FREE TRIAL</TrialButton>
+          <NavBarRightContent>
+            <span>✨ What's new</span>
+            <div
+              onMouseEnter={() => setShowDemo(true)}
+              onMouseLeave={() => setShowDemo(false)}
+              style={{ position: "relative", display: "inline-block" }}
+            >
+              <div style={{ cursor: "pointer" }}>
+                Demo
+                {showDemo ? (
+                  <KeyboardArrowUpIcon sx={{ position: "absolute" }} />
+                ) : (
+                  <KeyboardArrowDownIcon sx={{ position: "absolute" }} />
+                )}
+              </div>
+              {showDemo && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "100%",
+                    left: 0,
+                    backgroundColor: "#fff",
+                    padding: "15px",
+                    zIndex: 1,
+                    cursor: "pointer",
+                    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+                    borderRadius: "5px",
+                  }}
+                >
+                  {DemoData.map((title, index) => (
+                    <div
+                      key={index}
+                      style={{ marginBottom: "8px", width: "150px" }}
+                    >
+                      <strong style={{ width: "100px" }}>{title}</strong>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div>Contact Sales</div>
+            <div>+1-833-439-6633</div>
+            <CountryDropdown isScrolled={isScrolled} hovered={hovered} />
+          </NavBarRightContent>
+          <CustomButton lable={"14 DAY FREE TRIAL"} />
         </NavbarRight>
       </Navbar>
-
-      {/* Drawer with hover effect */}
-      <Box>
-        <Drawer
-          anchor="top"
-          open={drawerOpen}
-          sx={{
-            top: `${NavbarHeight}px`,
-            "& .MuiPaper-root": {
-              marginTop: `${NavbarHeight}px`,
-            },
-          }}
-        >
-          {renderDrawerList()}
-        </Drawer>
-      </Box>
 
       {/* MOBILE VIEW */}
       <MobleNavbar isScrolled={isScrolled}>
@@ -262,28 +193,11 @@ const MenuContainer = styled.div`
   }
 `;
 
-const Menu = styled.div`
-  display: flex;
-  gap: 20px;
-`;
-
-const MenuItem = styled.div`
-  padding: 10px 15px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  &:hover {
-    color: #101010;
-    background-color: white;
-    border-radius: 5px;
-  }
-`;
-
 const NavbarRight = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 10px;
+  width: 40%;
   @media (max-width: 900px) {
     display: none;
   }
@@ -298,15 +212,12 @@ const MobileIcon = styled.div`
   }
 `;
 
-const TrialButton = styled.button`
-  background-color: #d62027;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  &:hover {
-    background-color: #c21825;
+const NavBarRightContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 1400px) {
+    display: none;
   }
 `;
