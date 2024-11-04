@@ -18,16 +18,22 @@ const HexnodeAwardsOverview = () => {
           <Grid item xs={12} sm={12} md={4} key={index}>
             <AwardItem>
               <AwardItemContainer>
-                <div>
-                  <AwardImage
-                    src={award.organization}
-                    alt={award.organization}
-                  />
-                  <br />
+                <a
+                  href={award.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <div>
+                    <AwardImage
+                      src={award.organization}
+                      alt={award.organization}
+                    />
+                    <br />
 
-                  <AwardDescription>{award.description}</AwardDescription>
-                </div>
-
+                    <AwardDescription>{award.description}</AwardDescription>
+                  </div>
+                </a>
                 {index !== 2 && (
                   <div style={{ position: "relative" }}>
                     <DividerBox />

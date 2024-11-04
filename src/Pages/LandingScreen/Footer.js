@@ -279,7 +279,7 @@ const Footer = () => {
         </Typography>
         <Box
           sx={{
-            display: { md: "flex", sm: "flex", xs: "block" },
+            display: { md: "flex", sm: "block", xs: "block", width: "60%" },
             justifyContent: "space-between",
           }}
         >

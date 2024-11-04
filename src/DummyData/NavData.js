@@ -103,16 +103,19 @@ export const menuItems = [
 export const awards = [
   {
     organization: img4,
+    link: "https://www.hexnode.com/blogs/mitsogo-hexnode-named-a-leader-in-idc-marketscape-worldwide-uem-software-for-apple-devices-2024-vendor-assessment/",
     description:
       "Hexnode is listed as a leader and a major player in IDC MarketScape UEM Vendors Assessment Reports 2024.",
   },
   {
     organization: img3,
+    link: "https://www.hexnode.com/blogs/hexnode-uem-gets-recognized-in-the-2023-gartner-market-guide-for-unified-endpoint-management-tools/",
     description:
       "Hexnode was recognized in the 2023 Gartner® Market Guide for Unified Endpoint Management Tools.",
   },
   {
     organization: img2,
+    link: "https://www.hexnode.com/blogs/hexnode-included-in-the-unified-endpoint-management-landscape-report/",
     description:
       "Forrester includes Hexnode as a Notable vendor in The Unified Endpoint Management Landscape, Q3 2023.",
   },
@@ -122,32 +125,32 @@ export const cardsData = [
   {
     title: "Unified Endpoint Management",
     image: img8,
-    link: "/endpoint-management",
+    link: "https://www.hexnode.com/unified-endpoint-management/",
   },
   {
     title: "Mobile Device Management",
     image: img7,
-    link: "/mobile-device-management",
+    link: "https://www.hexnode.com/mobile-device-management/",
   },
   {
     title: "Kiosk Lockdown Management",
     image: img9,
-    link: "/kiosk-lockdown-management",
+    link: "https://www.hexnode.com/mobile-device-management/mobile-kiosk-software/",
   },
   {
     title: "Rugged Device Management",
     image: img6,
-    link: "/rugged-device-management",
+    link: "https://www.hexnode.com/mobile-device-management/rugged-device-management/",
   },
   {
     title: "IoT Management",
     image: img10,
-    link: "/iot-management",
+    link: "https://www.hexnode.com/mobile-device-management/iot-management/",
   },
   {
     title: "Digital Signage Software",
     image: img5,
-    link: "/digital-signage-software",
+    link: "https://www.hexnode.com/mobile-device-management/hexnode-digital-signage-software/",
   },
 ];
 

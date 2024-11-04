@@ -48,29 +48,36 @@ const CrossPlatformDashboard = () => {
             }}
           >
             <Card>
-              <HoverBox
-                hovered={hoveredIndex === index}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+              <a
+                href={card.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
               >
-                <img src={card.image} alt={card.title} />
-                <Title>{card.title}</Title>
-                <Box sx={{ position: "relative" }}>
-                  <Explore>Explore</Explore>
-                  <KeyboardArrowRightIcon
-                    sx={{
-                      position: "relative",
-                      left: "-10px",
-                      top: "5px",
-                      transition: "transform 0.2s ease",
-                      transform:
-                        hoveredIndex === index
-                          ? "translateX(10px)"
-                          : "translateX(0)",
-                    }}
-                  />
-                </Box>
-              </HoverBox>
+                <HoverBox
+                  hovered={hoveredIndex === index}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <img src={card.image} alt={card.title} />
+                  <Title>{card.title}</Title>
+                  <Box sx={{ position: "relative" }}>
+                    <Explore>Explore</Explore>
+                    <KeyboardArrowRightIcon
+                      sx={{
+                        position: "relative",
+                        left: "-10px",
+                        top: "5px",
+                        transition: "transform 0.2s ease",
+                        transform:
+                          hoveredIndex === index
+                            ? "translateX(10px)"
+                            : "translateX(0)",
+                      }}
+                    />
+                  </Box>
+                </HoverBox>
+              </a>
             </Card>
           </Grid>
         ))}
@@ -91,7 +98,7 @@ const Card = styled.div`
   border: 1px solid #ddd;
   margin-bottom: 20px;
   text-align: center;
-
+  cursor: pointer;
   img {
     max-width: 100%;
     max-height: 120px;

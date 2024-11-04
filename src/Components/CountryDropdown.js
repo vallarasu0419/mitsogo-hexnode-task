@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, Avatar, Paper, colors, Typography } from "@mui/material";
+import { Grid, Avatar, Paper, Typography } from "@mui/material";
 
 const countries = [
   {
@@ -111,7 +111,12 @@ const CountryDropdown = ({ isScrolled, hovered, direction }) => {
         <Avatar
           src={selectedCountry.flag}
           alt={`${selectedCountry.name} flag`}
-          style={{ width: "20px", height: "20px", marginRight: "8px" }}
+          style={{
+            width: "20px",
+            height: "20px",
+            marginRight: "8px",
+            padding: "5px",
+          }}
         />
         {selectedCountry.name}
       </Typography>

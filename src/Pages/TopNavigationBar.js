@@ -90,14 +90,21 @@ const TopNavigationBar = () => {
               )}
             </div>
             <div>Contact Sales</div>
-            {/* <div>+1-833-439-6633</div> */}
+            <div>+1-833-439-6633</div>
             <CountryDropdown
               isScrolled={isScrolled}
               hovered={hovered}
               direction={"down"}
             />
           </NavBarRightContent>
-          <CustomButton lable={"14 DAY FREE TRIAL"} />
+          <a
+            href="https://www.hexnode.com/mobile-device-management/cloud/signup/?utm_source=hexnode_home&utm_medium=referral&utm_campaign=sticky_button"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <CustomButton lable={"14 DAY FREE TRIAL"} />
+          </a>
         </NavbarRight>
       </Navbar>
 

@@ -78,16 +78,30 @@ const Home = () => {
                 gap: "20px",
               }}
             >
-              <CustomButton
-                lable={"TRY FOR FREE"}
-                style={{ padding: "20px" }}
-              />
+              <a
+                href="https://www.hexnode.com/mobile-device-management/cloud/signup/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <CustomButton
+                  lable={"TRY FOR FREE"}
+                  style={{ padding: "20px" }}
+                />
+              </a>
 
-              <CustomButton
-                lable={"REQUEST DEMO"}
-                style={{ padding: "20px" }}
-                outlined
-              />
+              <a
+                href="https://www.hexnode.com/mobile-device-management/request-demo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <CustomButton
+                  lable={"REQUEST DEMO"}
+                  style={{ padding: "20px" }}
+                  outlined
+                />
+              </a>
             </Box>
           </Box>
         </Grid>

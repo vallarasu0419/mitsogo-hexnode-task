@@ -38,18 +38,25 @@ const MobileMenu = ({ menuItems, setMobileMenuOpen }) => {
             </MenuItemHeader>
           </MobileMenuItem>
         ))}
-        <CustomButton
-          lable={"14 DAY FREE TRIAL"}
-          style={{
-            padding: "12px 30px",
-            border: "none",
-            borderRadius: "3px",
-            minHeight: "48px",
-            textAlign: "center",
-            margin: "30px 30px 20px",
-            textTransform: "uppercase",
-          }}
-        />
+        <a
+          href="https://www.hexnode.com/mobile-device-management/cloud/signup/?utm_source=hexnode_home&utm_medium=referral&utm_campaign=sticky_button"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <CustomButton
+            lable={"14 DAY FREE TRIAL"}
+            style={{
+              padding: "12px 30px",
+              border: "none",
+              borderRadius: "3px",
+              minHeight: "48px",
+              textAlign: "center",
+              margin: "30px 30px 20px",
+              textTransform: "uppercase",
+            }}
+          />
+        </a>
 
         <LogIn>Login</LogIn>
       </MobileMenuContainer>

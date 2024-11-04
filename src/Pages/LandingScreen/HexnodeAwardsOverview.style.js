@@ -53,7 +53,7 @@ export const AwardDescription = styled(Typography)`
 
 export const AwardItemContainer = styled.div`
   display: flex;
-
+  cursor: pointer;
   @media (max-width: 900px) {
     display: block;
   }
