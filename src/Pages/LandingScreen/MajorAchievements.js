@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import book from "../../assets/booklet.png";
-import OIDC from "../../assets/idc-logo (1).png";
+import book from "../../Assets/booklet.png";
+import OIDC from "../../Assets/idc-logo (1).png";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 const MajorAchievements = () => {

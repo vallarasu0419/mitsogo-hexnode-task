@@ -2,16 +2,16 @@ import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import img11 from "../../assets/marriott-intl.svg";
-import img12 from "../../assets/merck.svg";
-import img13 from "../../assets/costco.svg";
-import img14 from "../../assets/saic.svg";
-import img15 from "../../assets/hilton.svg";
-import img16 from "../../assets/group1-automotive.png";
-import img17 from "../../assets/lowes.svg";
-import img18 from "../../assets/polaris.svg";
-import img19 from "../../assets/gorillas.svg";
-import img20 from "../../assets/wolt.svg";
+import img11 from "../../Assets/marriott-intl.svg";
+import img12 from "../../Assets/merck.svg";
+import img13 from "../../Assets/costco.svg";
+import img14 from "../../Assets/saic.svg";
+import img15 from "../../Assets/hilton.svg";
+import img16 from "../../Assets/group1-automotive.png";
+import img17 from "../../Assets/lowes.svg";
+import img18 from "../../Assets/polaris.svg";
+import img19 from "../../Assets/gorillas.svg";
+import img20 from "../../Assets/wolt.svg";
 
 const images = [
   img11,
@@ -137,16 +137,16 @@ export default TrustedByPartners;
 
 // import React, { useEffect, useState } from "react";
 // import { Box, Typography, Grid } from "@mui/material";
-// import img11 from "../../assets/marriott-intl.svg";
-// import img12 from "../../assets/merck.svg";
-// import img13 from "../../assets/costco.svg";
-// import img14 from "../../assets/saic.svg";
-// import img15 from "../../assets/hilton.svg";
-// import img16 from "../../assets/group1-automotive.png";
-// import img17 from "../../assets/lowes.svg";
-// import img18 from "../../assets/polaris.svg";
-// import img19 from "../../assets/gorillas.svg";
-// import img20 from "../../assets/wolt.svg";
+// import img11 from "../../Assets/marriott-intl.svg";
+// import img12 from "../../Assets/merck.svg";
+// import img13 from "../../Assets/costco.svg";
+// import img14 from "../../Assets/saic.svg";
+// import img15 from "../../Assets/hilton.svg";
+// import img16 from "../../Assets/group1-automotive.png";
+// import img17 from "../../Assets/lowes.svg";
+// import img18 from "../../Assets/polaris.svg";
+// import img19 from "../../Assets/gorillas.svg";
+// import img20 from "../../Assets/wolt.svg";
 
 // // Array of images
 // const images = [

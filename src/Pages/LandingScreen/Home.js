@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import img1 from "../../assets/img1.jpg";
+import img1 from "../../Assets/img1.jpg";
 import CustomButton from "../../Components/CustomButton";
 
 const Home = () => {

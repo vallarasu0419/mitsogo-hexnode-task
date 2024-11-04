@@ -4,9 +4,9 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import hexnode from "../../assets/hexnode (1).svg";
-import mitsogo from "../../assets/powered-by-mitsogo.svg";
-import banner from "../../assets/promo-banner.png";
+import hexnode from "../../Assets/hexnode (1).svg";
+import mitsogo from "../../Assets/powered-by-mitsogo.svg";
+import banner from "../../Assets/promo-banner.png";
 
 const Footer = () => {
   return (

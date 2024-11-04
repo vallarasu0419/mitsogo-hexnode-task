@@ -50,7 +50,7 @@ const TopNavigationBar = () => {
 
         <NavbarRight>
           <NavBarRightContent>
-            <span>✨ What's new</span>
+            {/* <span>✨ What's new</span> */}
             <div
               onMouseEnter={() => setShowDemo(true)}
               onMouseLeave={() => setShowDemo(false)}
@@ -90,7 +90,7 @@ const TopNavigationBar = () => {
               )}
             </div>
             <div>Contact Sales</div>
-            <div>+1-833-439-6633</div>
+            {/* <div>+1-833-439-6633</div> */}
             <CountryDropdown
               isScrolled={isScrolled}
               hovered={hovered}

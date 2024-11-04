@@ -1,23 +1,23 @@
-import img2 from "../assets/forrester.png";
-import img3 from "../assets/gartner-logo.svg";
-import img4 from "../assets/idc-logo.png";
-import img5 from "../assets/digital-signage-software.jpg";
-import img6 from "../assets/rugged-management.jpg";
-import img7 from "../assets/mobile-management.jpg";
-import img8 from "../assets/management.jpg";
-import img9 from "../assets/lockdown-management.jpg";
-import img10 from "../assets/iot-management.jpg";
-import img1 from "../assets/img1.jpg";
-import Setup from "../assets/multi-Device-Setup.webp";
-import men1 from "../assets/men1.jpg";
-import men2 from "../assets/men2.jpg";
-import men3 from "../assets/men3.jpg";
-import engine from "../assets/engine.jpg";
-import donaldson from "../assets/donaldson.png";
-import airways1 from "../assets/western-airways.png";
-import airways2 from "../assets/western-airways (1).png";
-import condeNast1 from "../assets/conde-nast.jpg";
-import condeNast2 from "../assets/conde-nast.svg";
+import img2 from "../Assets/forrester.png";
+import img3 from "../Assets/gartner-logo.svg";
+import img4 from "../Assets/idc-logo.png";
+import img5 from "../Assets/digital-signage-software.jpg";
+import img6 from "../Assets/rugged-management.jpg";
+import img7 from "../Assets/mobile-management.jpg";
+import img8 from "../Assets/management.jpg";
+import img9 from "../Assets/lockdown-management.jpg";
+import img10 from "../Assets/iot-management.jpg";
+import img1 from "../Assets/img1.jpg";
+import Setup from "../Assets/multi-Device-Setup.webp";
+import men1 from "../Assets/men1.jpg";
+import men2 from "../Assets/men2.jpg";
+import men3 from "../Assets/men3.jpg";
+import engine from "../Assets/engine.jpg";
+import donaldson from "../Assets/donaldson.png";
+import airways1 from "../Assets/western-airways.png";
+import airways2 from "../Assets/western-airways (1).png";
+import condeNast1 from "../Assets/conde-nast.jpg";
+import condeNast2 from "../Assets/conde-nast.svg";
 
 export const menuItems = [
   {
